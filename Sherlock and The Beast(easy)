@@ -1,0 +1,29 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+#
+# Complete the 'decentNumber' function below.
+#
+# The function accepts INTEGER n as parameter.
+#
+
+def decentNumber(n):
+    # Write your code her
+    for i in range(n + 1):
+        if (n-i)%3==0 and i%5==0:
+            print((n-i)*'5'+(i)*'3')
+            return
+    print(-1)
+
+if __name__ == '__main__':
+    t = int(input().strip())
+
+    for t_itr in range(t):
+        n = int(input().strip())
+
+        decentNumber(n)
